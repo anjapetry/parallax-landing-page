@@ -43,8 +43,7 @@
       </h1>
       <a href="#contact-form"
         class="flex items-center px-8 py-3 space-x-2 font-medium transition-shadow border rounded-full bg-accent text-bkg border-bkg focus:outline-none focus-visible:ring-4 ring-accent ring-offset-bkg ring-offset-2 hover:bg-accent/90 drop-shadow-text-lg hover:drop-shadow-none">
-        <span class="tracking-wider uppercase">Book a Trip
-        </span>
+        <span class="tracking-wider uppercase">Book a Trip</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
           <rect width="256" height="256" fill="none"></rect>
           <polyline points="96 184 32 200 32 56 96 40" fill="none" stroke="currentColor" stroke-linecap="round"
@@ -63,8 +62,8 @@
           <h2 id="headline" class="text-3xl font-bold tracking-wide drop-shadow-text-md">Trips for Explorers</h2>
         </div>
         <p class="text-muted drop-shadow-text-sm">We find once-in-a-lifetime locations and reserve them for travelers
-          full
-          of adventure. Calling all explorers and extremists to the trip of their dreams in the most exotic locations
+          full of adventure. Calling all explorers and extremists to the trip of their dreams in the most exotic
+          locations
           all around the globe.</p>
       </section>
       <section aria-labelledby="slider" class="container grid gap-4 text-center sm:text-left">
@@ -76,10 +75,9 @@
           </div>
           <div class="flex flex-wrap items-center justify-center space-x-4 space-y-4 sm:flex-nowrap sm:justify-between">
             <p class="max-w-2xl text-muted drop-shadow-text-sm">We specialize in finding places no one else knows about.
-              Here
-              are a few of our favorite spots for true adventurers.</p>
+              Here are a few of our favorite spots for true adventurers.</p>
             <div class="flex space-x-4">
-              <button data-slideBtn id="prev" aria-label="show previous image"
+              <button type="button" data-slideBtn id="prev" aria-label="show previous image"
                 class="grid p-2 rounded-full place-items-center bg-accent hover:bg-accent/90 text-bkg focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-bkg ring-accent disabled:bg-accent/20 disabled:text-accent"
                 disabled>
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="pointer-events-none"
@@ -93,7 +91,7 @@
                     stroke-linejoin="round" stroke-width="24"></line>
                 </svg>
               </button>
-              <button data-slideBtn id="next" aria-label="show next image"
+              <button type="button" data-slideBtn id="next" aria-label="show next image"
                 class="grid p-2 rounded-full place-items-center bg-accent hover:bg-accent/90 text-bkg focus:outline-none focus-visible:ring-4 ring-offset-2 ring-offset-bkg ring-accent disabled:bg-accent/20 disabled:text-accent">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="pointer-events-none"
                   fill="currentColor" viewBox="0 0 256 256">
@@ -106,76 +104,78 @@
                     stroke-linejoin="round" stroke-width="24"></line>
                 </svg>
               </button>
-              <div class="container -mt-10 sm:-mt-20 lg:-mt-36 xs:w-screen">
-                <div class="flex transition-transform duration-500" data-slideContainer>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-1.jpg" alt="Black Beach in Vík">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Black Beach in Vík</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-2.jpg" alt="Waterfall Seljalandsfoss">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Seljalandsfoss</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-3.jpg" alt="Skógafoss at Night">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Skógafoss at Night</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-4.jpg" alt="Fjaðrárgljúfur canyon in Iceland">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Fjaðrárgljúfur canyon</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-5.jpg" alt="Iceland Scene">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Mountain Inlet</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-6.jpg" alt="Iceland Scene">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Angel Cliffs</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-7.jpg" alt="Iceland Scene">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Aurora Sound</p>
-                  </div>
-                  <div class="relative flex-grow flex-shrink-0 w-full xs:w-auto xs:basis-96" data-slide>
-                    <img loading="lazy"
-                      class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
-                      src="./images/slider-8.jpg" alt="Iceland Scene">
-                    <p
-                      class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
-                      Icy Meadows</p>
-                  </div>
-                </div>
-              </div>
             </div>
+          </div>
+        </div>
       </section>
+      <div class="container -mt-10 sm:-mt-20 lg:-mt-36 xs:w-screen">
+        <div class="flex transition-transform duration-500" data-slideContainer>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-1.jpg" alt="Black Beach in Vík">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Black Beach in Vík</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-2.jpg" alt="Waterfall Seljalandsfoss">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Seljalandsfoss</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-3.jpg" alt="Skógafoss at Night">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Skógafoss at Night</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-4.jpg" alt="Fjaðrárgljúfur canyon in Iceland">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Fjaðrárgljúfur canyon</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-5.jpg" alt="Iceland Scene">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Mountain Inlet</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-6.jpg" alt="Iceland Scene">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Angel Cliffs</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full pr-4 xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-7.jpg" alt="Iceland Scene">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Aurora Sound</p>
+          </div>
+          <div class="relative flex-grow flex-shrink-0 w-full xs:w-auto xs:basis-96" data-slide>
+            <img loading="lazy"
+              class="object-cover h-full [@media(hover:hover)]:grayscale hover:grayscale-0 transition-all peer"
+              src="./images/slider-8.jpg" alt="Iceland Scene">
+            <p
+              class="absolute bottom-4 left-4 px-4 py-2 bg-bkg font-bold text-lg pointer-events-none tracking-wide [@media(hover:hover)]:opacity-0 peer-hover:opacity-100 transition-opacity">
+              Icy Meadows</p>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
   <script type="module" src="/main.js"></script>
