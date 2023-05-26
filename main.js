@@ -1,34 +1,34 @@
 import './style.css';
 
 // IMAGE SLIDER //
-const slideBtns = document.querySelectorAll('[data-slideBtn]');
-const slideContainer = document.querySelector('[data-slideContainer]');
-const slides = [...document.querySelectorAll('[data-slide]')];
-let currentIndex = 0;
-let isMoving = false;
+const slideBtns = document.querySelectorAll('[data-slideBtn]'); // get slide buttons
+const slideContainer = document.querySelector('[data-slideContainer]'); // get slide container
+const slides = [...document.querySelectorAll('[data-slide]')]; // get slides
+let currentIndex = 0; // current slide index
+let isMoving = false; // is slider moving
 
 // btn handle function
-function handleSlideBtnClick(e){
-  if(isMoving) return;
-  isMoving = true;
-  e.currentTarget.id === "prev"
-    ? currentIndex--
-    : currentIndex++;
+function handleSlideBtnClick(e){ // handle btn click
+  if(isMoving) return; // if slider is moving, return
+  isMoving = true; // set isMoving to true
+  e.currentTarget.id === "prev" // if prev btn clicked
+    ? currentIndex-- // decrement index
+    : currentIndex++; // else increment index
   slideContainer.dispatchEvent(new Event("sliderMove")); // dispatch event
 }
 
 // remove/add attribute function
-const removeDisabledAttribute = (els) => els.forEach(el => el.removeAttribute('disabled'));
-const addDisabledAttribute = (els) => els.forEach(el => el.setAttribute('disabled', 'true'));
+const removeDisabledAttribute = (els) => els.forEach(el => el.removeAttribute('disabled')); // remove disabled attribute
+const addDisabledAttribute = (els) => els.forEach(el => el.setAttribute('disabled', 'true')); // add disabled attribute
 
 // event listeners
 slideBtns.forEach(btn => btn.addEventListener('click', handleSlideBtnClick)); // btn click event
 
-slideContainer.addEventListener('sliderMove', () => {
+slideContainer.addEventListener('sliderMove', () => { // slider move event
   // 1. translate the container to the right/left
   slideContainer.style.transform = `translateX(-${currentIndex * slides[0].clientWidth}px)`; // 100% = 1 slide
   // 2. remove disabled attributes
-  removeDisabledAttribute(slideBtns);
+  removeDisabledAttribute(slideBtns); // remove disabled attribute from all btns
   // 3. reenable disabled attribute if needed
   currentIndex === 0 && addDisabledAttribute([slideBtns[0]]); // prev
 })
@@ -89,3 +89,29 @@ async function handleFormSubmit(e){
 
 // event listener form submit
 contactForm.addEventListener('submit', handleFormSubmit); // form submit event
+
+// FADE UP OBSERVER //
+function fadeUpObserverCallback(elsToWatch){ // callback function
+  elsToWatch.forEach((el) => { // loop through elements
+    if(el.isIntersecting){ // if element is intersecting
+      el.target.classList.add('faded'); // add faded class
+      fadeUpObserver.unobserve(el.target); // unobserve element
+      el.target.addEventListener("transitionend", () => { // remove faded class after transition
+        el.target.classList.remove('fade-up', 'faded'); // remove classes
+      }, { once: true }) // only run once
+    } 
+  }) // end loop
+}
+
+const fadeUpObserverOptions = { 
+  threshold: .6, // 60% of element must be visible
+}
+
+const fadeUpObserver = new IntersectionObserver( // create observer
+  fadeUpObserverCallback, // callback function
+  fadeUpObserverOptions // options
+);
+
+document.querySelectorAll('.fade-up').forEach((item) => { // loop through elements
+  fadeUpObserver.observe(item); // observe element
+})
